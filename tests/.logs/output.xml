@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-06T08:28:40.966279" rpa="false" schemaversion="5">
+<suite id="s1" name="Toro Teste" source="C:\Users\angel\OneDrive\Área de Trabalho\case_automacao_toro\tests\toro_teste.robot">
+<test id="s1-t1" name="Caso de teste - Login com credenciais válidas" line="10">
+<kw name="Abrir o navegador" owner="toro_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-06T08:28:45.049266" level="INFO">Opening browser 'Chrome' to base url 'https://www.toroinvestimentos.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-06T08:28:45.047643" elapsed="40.487918"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-06T08:29:25.536060" elapsed="0.499081"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Fazer login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-06T08:29:26.035533" elapsed="0.130535"/>
+</kw>
+<status status="PASS" start="2024-12-06T08:28:45.045773" elapsed="41.120555"/>
+</kw>
+<kw name="Dado que estou na plataforma da Toro e clico em fazer login" owner="toro_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-06T08:29:26.231678" level="INFO">Clicking element '//a[@class='styles__LoginContainer-sc-e0073d34-0 iLoNZb login-button'][contains(.,'Fazer login')]'.</msg>
+<arg>${fazer_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T08:29:26.230935" elapsed="1.717026"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>url=${LOGIN_ABA}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-06T08:29:27.948435" elapsed="23.712697"/>
+</kw>
+<status status="PASS" start="2024-12-06T08:29:26.230273" elapsed="25.431149"/>
+</kw>
+<kw name="Quando insiro meu email de usuário válido" owner="toro_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-06T08:29:51.662921" level="INFO">Typing text 'angelicafarioliveira@gmail.com' into text field 'css=input[type=text]'.</msg>
+<arg>css=input[type=text]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T08:29:51.662523" elapsed="1.515276"/>
+</kw>
+<status status="PASS" start="2024-12-06T08:29:51.662008" elapsed="1.516044"/>
+</kw>
+<kw name="E insiro minha senha válida invalida" owner="toro_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-06T08:29:53.180395" level="INFO">Typing text '0123456' into text field 'css=input[type=password]'.</msg>
+<arg>css=input[type=password]</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T08:29:53.180007" elapsed="0.367267"/>
+</kw>
+<status status="PASS" start="2024-12-06T08:29:53.179478" elapsed="0.368061"/>
+</kw>
+<kw name="E clico no botão de entrar" owner="toro_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-06T08:29:53.556702" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T08:29:53.556368" elapsed="0.512682"/>
+</kw>
+<status status="PASS" start="2024-12-06T08:29:53.555816" elapsed="0.513482"/>
+</kw>
+<kw name="Então eu devo receber uma mensagem de senha invalida" owner="toro_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENSAGEM_ERRO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-06T08:29:54.070926" elapsed="2.743357"/>
+</kw>
+<status status="PASS" start="2024-12-06T08:29:54.070357" elapsed="2.744166"/>
+</kw>
+<kw name="Fechar o navegador" owner="toro_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-06T08:29:56.815773" elapsed="3.952842"/>
+</kw>
+<status status="PASS" start="2024-12-06T08:29:56.815244" elapsed="3.953920"/>
+</kw>
+<doc>Este teste verifica o login do usuário de forma valida</doc>
+<tag>Login_senha_invalida</tag>
+<status status="PASS" start="2024-12-06T08:28:45.012544" elapsed="75.757322"/>
+</test>
+<doc>Essa suiite testa o login da toro</doc>
+<status status="PASS" start="2024-12-06T08:28:40.977467" elapsed="79.796793"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Login_senha_invalida</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Toro Teste">Toro Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
