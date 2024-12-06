@@ -1,3 +1,6 @@
 *** Variables ***
-${email}                 angelicafarioliveira@gmail.com
-${senha}                 0123456
+${email}                 email
+${senha}                 password
+
+
+
