@@ -1,7 +1,7 @@
 # Automação de Login - Plataforma Toro
 Este projeto foi desenvolvido para automatizar o processo de login na plataforma da [Toro Investimentos](https://www.toroinvestimentos.com.br/).
 
-![image](https://github.com/user-attachments/assets/4e94c3d6-396d-46a9-8c27-9a674477cd02)
+<img width="500" alt="app sorteio - git" src="https://github.com/user-attachments/assets/4e94c3d6-396d-46a9-8c27-9a674477cd02">
 
 ## Tecnologias Utilizadas
 
@@ -27,6 +27,9 @@ Execute os seguintes comandos para instalar o Robot Framework e a SeleniumLibrar
 bash
 - pip install robotframework
 - pip install robotframework-seleniumlibrary
+
+### Informações uteis de comando
+robot -d .log toro_teste.robot para rodar o teste e manter todos os logs organizados em um pasta
 
 
 ## Estrutura do Projeto
