@@ -25,20 +25,28 @@ Certifique-se de ter os seguintes softwares instalados no seu ambiente de desenv
 Execute os seguintes comandos para instalar o Robot Framework e a SeleniumLibrary:
 
 bash
-pip install robotframework
-pip install robotframework-seleniumlibrary
+- pip install robotframework
+- pip install robotframework-seleniumlibrary
 
 
 ## Estrutura do Projeto
-tests/login_tests.robot: Arquivo contendo os cenários de teste automatizados.
 
-resources/keywords.robot: Arquivo contendo keywords reutilizáveis.
+- **CASE_AUTOMACAO_TORO**: Organização de todos os arquivos e subpastas relacionadas ao projeto.
 
-resources/variables.robot: Arquivo contendo variáveis utilizadas nos testes.
+  - **tests**: Esta pasta é dedicada aos testes automatizados. Dentro dela, eu mantenho os arquivos de teste e outras subpastas relevantes.
 
-README.md: Documentação do projeto.
+    - **.logs**: Subpasta destinada a armazenar os logs gerados durante a execução dos testes. Isso é útil para depuração e análise de resultados.
 
-.gitignore: Arquivo para ignorar arquivos desnecessários no repositório.
+    - **credenciais.robot**: Arquivo de variáveis que armazena suas credenciais de login, como email e senha. Isso Aqui eu mantenho os dados sensíveis separados do código principal.
+
+    - **toro_resource.robot**: Arquivo de recursos que contém definições de keywords e variáveis reutilizáveis. Este arquivo é importado pelos arquivos de teste para utilizar as definições centralizadas.
+
+    - **toro_teste.robot**: Arquivo de testes que contém os casos de teste específicos. O arquivo importa os recursos e utiliza as keywords definidas no `toro_resource.robot` para executar os testes.
+
+  - **LICENSE**: Arquivo que define os termos e condições de uso do seu projeto. 
+
+  - **README.md**: Arquivo de documentação que fornece uma visão geral do seu projeto, instruções de instalação, uso, e outros detalhes importantes.
+
 
 
 ## Levantamento de cenários de testes criticos para o login do usuário
@@ -92,6 +100,11 @@ Cenário 5: Login com conta inativa
 > 2 - Login em múltiplos dispositivos.
 > 
 > Impacto: O sistema lida com tentativas em diferentes logins. Além disso, o sistema deve gerenciar isso de forma segura.
+>
+## Estratégias de Testes
+> Heuristica ALTER FACE do Júlio de Lima.
+> 
+> Abordagem "Don't Reapeat Yourself" (DRY).
 
 
 
