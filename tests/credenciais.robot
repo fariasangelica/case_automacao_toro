@@ -1,6 +1,6 @@
 *** Variables ***
-${email}                 email
-${senha}                 password
+${email}                 # email
+${senha}                 # password
 
 
 
