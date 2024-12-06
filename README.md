@@ -28,8 +28,8 @@ bash
 - pip install robotframework
 - pip install robotframework-seleniumlibrary
 
-### Informações uteis de comando
-robot -d .log toro_teste.robot para rodar o teste e manter todos os logs organizados em um pasta
+### Informações uteis de comandos
+robot -d .log toro_teste.robot para rodar o teste e manter todos os logs organizados em um pasta.
 
 
 ## Estrutura do Projeto
