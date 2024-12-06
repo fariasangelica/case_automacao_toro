@@ -95,7 +95,7 @@ Cenário 5: Login com conta inativa
 > 
 > Resultado Esperado: Deve exibir a mensagem de erro "Conta inativa. Verifique seu e-mail para ativar a conta".
 
-### Outros possiveis cenários de testes criticos que seria bom nos atentarmos:
+### Outros possiveis cenários de testes criticos:
 > 1 - Login com sessão expirada.
 > 
 > Impacto: Inatividade após um período de inatividade por motivos de segurança.
